@@ -14,45 +14,49 @@
 <body>
 
     <div class="main">
-        <form><input type= "text" disabled value="200"></form>
+        <form><input type="text" disabled value="200"></form>
         <table>
             <!--PRIMEIRA FILEIRA-->
             <tr>
-                <td><input type="button" class="button" value="C" onclick=""></td>
-                <td><input type="button" class="button" value="/" onclick=""></td>
-                <td><input type="button" class="button" value="x" onclick=""></td>
-                <td><input type="button" class="button" value=">" onclick=""></td>
+                <td><input type="button" class="button" value="C" onclick="teste.play()"></td>
+                <td><input type="button" class="button" value="/" onclick="teste.play()"></td>
+                <td><input type="button" class="button" value="x" onclick="teste.play()"></td>
+                <td><input type="button" class="button" value=">" onclick="teste.play()"></td>
             </tr>
             <!--SEGUNDA FILEIRA-->
             <tr>
-                <td><input type="button" class="button" value="7" onclick=""></td>
-                <td><input type="button" class="button" value="8" onclick=""></td>
-                <td><input type="button" class="button" value="9" onclick=""></td>
-                <td><input type="button" class="button" value="-" onclick=""></td>
+                <td><input type="button" class="button" value="7" onclick="teste.play()"></td>
+                <td><input type="button" class="button" value="8" onclick="teste.play()"></td>
+                <td><input type="button" class="button" value="9" onclick="teste.play()"></td>
+                <td><input type="button" class="button" value="-" onclick="teste.play()"></td>
             </tr>
             <!--TERCEIRA FILEIRA-->
             <tr>
-                <td><input type="button" class="button" value="4" onclick=""></td>
-                <td><input type="button" class="button" value="5" onclick=""></td>
-                <td><input type="button" class="button" value="6" onclick=""></td>
-                <td><input type="button" class="button" value="+" onclick=""></td>
+                <td><input type="button" class="button" value="4" onclick="teste.play()"></td>
+                <td><input type="button" class="button" value="5" onclick="teste.play()"></td>
+                <td><input type="button" class="button" value="6" onclick="teste.play()"></td>
+                <td><input type="button" class="button" value="+" onclick="teste.play()"></td>
             </tr>
             <!--QUARTA FILEIRA-->
             <tr>
-                <td><input type="button" class="button" value="1" onclick=""></td>
-                <td><input type="button" class="button" value="2" onclick=""></td>
-                <td><input type="button" class="button" value="3" onclick=""></td>
-                <td rowspan="2"><input type="button" class="button" value="=" style="height:136px;" onclick=""></td>
+                <td><input type="button" class="button" value="1" onclick="teste.play()"></td>
+                <td><input type="button" class="button" value="2" onclick="teste.play()"></td>
+                <td><input type="button" class="button" value="3" onclick="teste.play()"></td>
+                <td rowspan="2"><input type="button" class="button" value="=" style="height:136px;" onclick="teste.play()"></td>
             </tr>
             <!--QUINTA FILEIRA-->
             <tr>
-                <td colspan="2"><input type="button" class="button" value="0" style="width:136px;" onclick=""></td>
-                <td><input type="button" class="button" value="." onclick=""></td>
+                <td colspan="2"><input type="button" class="button" value="0" style="width:136px;" onclick="teste.play()"></td>
+                <td><input type="button" class="button" value="." onclick="teste.play()"></td>
             </tr>
         </table>
     </div>
 
     <script src='script.js'> </script>
+    <script>
+        var teste = new Audio();
+        teste.src = 'click.mp3'
+    </script>
 </body>
 
 </html>
