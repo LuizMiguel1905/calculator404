@@ -14,7 +14,7 @@
 <body>
 
     <div class="main">
-        <form><input type="text" disabled value="200"></form>
+        <form name="form"><input name="txt" type="text" disabled value="0"></form>
         <table>
             <!--PRIMEIRA FILEIRA-->
             <tr>
@@ -25,30 +25,30 @@
             </tr>
             <!--SEGUNDA FILEIRA-->
             <tr>
-                <td><input type="button" class="button" value="7" id="Bsete" onclick="teste.play()"></td>
-                <td><input type="button" class="button" value="8" id="Boito" onclick="teste.play()"></td>
-                <td><input type="button" class="button" value="9" id="Bnove" onclick="teste.play()"></td>
+                <td><input type="button" class="button" value="7" id="Bsete" onclick="teste.play(), display(7)"></td>
+                <td><input type="button" class="button" value="8" id="Boito" onclick="teste.play(), display(8)"></td>
+                <td><input type="button" class="button" value="9" id="Bnove" onclick="teste.play(), display(9)"></td>
                 <td><input type="button" class="button" value="-" id="Bsubtrator" onclick="teste.play()"></td>
             </tr>
             <!--TERCEIRA FILEIRA-->
             <tr>
-                <td><input type="button" class="button" value="4" id="Bquatro" onclick="teste.play()"></td>
-                <td><input type="button" class="button" value="5" id="Bcinco" onclick="teste.play()"></td>
-                <td><input type="button" class="button" value="6" id="Bseis" onclick="teste.play()"></td>
+                <td><input type="button" class="button" value="4" id="Bquatro" onclick="teste.play(), display(4)"></td>
+                <td><input type="button" class="button" value="5" id="Bcinco" onclick="teste.play(), display(5)"></td>
+                <td><input type="button" class="button" value="6" id="Bseis" onclick="teste.play(), display(6)"></td>
                 <td><input type="button" class="button" value="+" id="Bsomador" onclick="teste.play()"></td>
             </tr>
             <!--QUARTA FILEIRA-->
             <tr>
-                <td><input type="button" class="button" value="1" id="Bum" onclick="teste.play()"></td>
-                <td><input type="button" class="button" value="2" id="Bdois" onclick="teste.play()"></td>
-                <td><input type="button" class="button" value="3" id="Btres" onclick="teste.play()"></td>
+                <td><input type="button" class="button" value="1" id="Bum" onclick="teste.play(), display(1)"></td>
+                <td><input type="button" class="button" value="2" id="Bdois" onclick="teste.play(), display(2)"></td>
+                <td><input type="button" class="button" value="3" id="Btres" onclick="teste.play(), display(3)"></td>
                 <td rowspan="2"><input type="button" class="button" value="=" id="Bigual" style="height:136px;"
-                onclick="teste.play()"></td>
+                        onclick="teste.play()"></td>
             </tr>
             <!--QUINTA FILEIRA-->
             <tr>
                 <td colspan="2"><input type="button" class="button" value="0" id="Bzero" style="width:136px;"
-                onclick="teste.play()"></td>
+                        onclick="teste.play()"></td>
                 <td><input type="button" class="button" value="." id="Bponto" onclick="teste.play()"></td>
             </tr>
         </table>
