@@ -29,3 +29,32 @@ function displayDate() {
 //-----------------------------------------------------------------------------
 
 // id="sept" onmousedown="seven()"
+
+//-----------------------------------------------------------------------------
+
+/* function inserir(num){
+     var numero = document.getElementById('resultado').innerHTML;
+     document.getElementById('resultado').innerHTML = (numero + num); 
+    }
+    function limpar(){
+        document.getElementById('resultado').innerHTML = " "; 
+    }
+    function apagar(){
+       var voltar = document.getElementById('resultado').innerHTML; 
+       document.getElementById('resultado').innerHTML = voltar.substring(0, voltar.length -1); 
+    }
+    function calcular(){
+        var calcula = document.getElementById('resultado').innerHTML; 
+        if(calcula){
+        document.getElementById('resultado').innerHTML = eval(calcula);
+        }
+        else{
+            document.getElementById('resultado').innerHTML = "Erro"; 
+        }
+    }
+    function porcentagem(){
+        var p = document.getElementById('resultado').innerHTML; 
+        document.getElementById('resultado').innerHTML = (p / 100); 
+
+    }
+onclick = "inserir('1')" - em cada botão */
