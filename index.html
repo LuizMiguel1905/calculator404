@@ -14,11 +14,11 @@
 <body>
 
     <div class="main">
-        <form name="form"><input name="txt" type="text" disabled value="0"></form>
+        <form name="form"><input name="txt" type="text" id="resultado" disabled value="0"></form>
         <table>
             <!--PRIMEIRA FILEIRA-->
             <tr>
-                <td><input type="button" class="button" value="C" id="Bsete" onclick="teste.play()"></td>
+                <td><input type="button" class="button" value="C" id="Bsete" onclick="teste.play(), deletar()"></td>
                 <td><input type="button" class="button" value="/" id="Bdivisor" onclick="teste.play()"></td>
                 <td><input type="button" class="button" value="x" id="Bmultiplicador" onclick="teste.play()"></td>
                 <td><input type="button" class="button" value=">" id="Bdelete" onclick="teste.play()"></td>
@@ -35,7 +35,7 @@
                 <td><input type="button" class="button" value="4" id="Bquatro" onclick="teste.play(), display(4)"></td>
                 <td><input type="button" class="button" value="5" id="Bcinco" onclick="teste.play(), display(5)"></td>
                 <td><input type="button" class="button" value="6" id="Bseis" onclick="teste.play(), display(6)"></td>
-                <td><input type="button" class="button" value="+" id="Bsomador" onclick="teste.play()"></td>
+                <td><input type="button" class="button" value="+" id="Bsomador" onclick="teste.play(), plus()"></td>
             </tr>
             <!--QUARTA FILEIRA-->
             <tr>
@@ -48,8 +48,8 @@
             <!--QUINTA FILEIRA-->
             <tr>
                 <td colspan="2"><input type="button" class="button" value="0" id="Bzero" style="width:136px;"
-                        onclick="teste.play()"></td>
-                <td><input type="button" class="button" value="." id="Bponto" onclick="teste.play()"></td>
+                        onclick="teste.play(), display(0)"></td>
+                <td><input type="button" class="button" value="." id="Bponto" onclick="teste.play(), display('.')"></td>
             </tr>
         </table>
     </div>

@@ -1,8 +1,6 @@
 var teste = new Audio();
 teste.src = 'click.mp3';
 
-var teste = new Audio();
-teste.src = 'click.mp3'
 
 var n1 = 0;
 function display(num) {
@@ -15,8 +13,9 @@ function display(num) {
 
 }
 
-function clear() {
+function deletar() {
     document.form.txt.value = "";
+    document.form.txt.value = 0;
 }
 
 function plus() {
