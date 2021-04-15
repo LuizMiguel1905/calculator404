@@ -19,24 +19,26 @@
         <table>
             <!--PRIMEIRA FILEIRA-->
             <tr>
-                <td><input type="button" class="button" value="C" onclick="teste.play(), limpar()"></td>
-                <td><input type="button" class="button" value="/" onclick="teste.play()"></td>
-                <td><input type="button" class="button" value="x" onclick="teste.play()"></td>
-                <td><input type="button" class="button" value=">" onclick="teste.play(), deletar()"></td>
+                <td><input type="button" class="button" class="operation" value="C" onclick="teste.play()">
+                </td>
+                <td><input type="button" class="button" class="operation" value="/" onclick="teste.play()"></td>
+                <td><input type="button" class="button" class="operation" value="x" onclick="teste.play()"></td>
+                <td><input type="button" class="button" class="operation" value=">" onclick="teste.play(), deletar()">
+                </td>
             </tr>
             <!--SEGUNDA FILEIRA-->
             <tr>
                 <td><input type="button" class="button" value="7" onclick="teste.play()"></td>
                 <td><input type="button" class="button" value="8" onclick="teste.play()"></td>
                 <td><input type="button" class="button" value="9" onclick="teste.play()"></td>
-                <td><input type="button" class="button" value="-" onclick="teste.play()"></td>
+                <td><input type="button" class="button" class="operation" value="-" onclick="teste.play()"></td>
             </tr>
             <!--TERCEIRA FILEIRA-->
             <tr>
                 <td><input type="button" class="button" value="4" onclick="teste.play()"></td>
                 <td><input type="button" class="button" value="5" onclick="teste.play()"></td>
                 <td><input type="button" class="button" value="6" onclick="teste.play()"></td>
-                <td><input type="button" class="button" value="+" onclick="teste.play(), plus()"></td>
+                <td><input type="button" class="button" class="operation" value="+" onclick="teste.play(), plus()"></td>
             </tr>
             <!--QUARTA FILEIRA-->
             <tr>
@@ -49,8 +51,8 @@
             <!--QUINTA FILEIRA-->
             <tr>
                 <td colspan="2"><input type="button" class="button" value="0" id="Bzero" style="width:136px;"
-                        onclick="teste.play(), display(0)"></td>
-                <td><input type="button" class="button" value="." id="Bponto" onclick="teste.play(), display('.')"></td>
+                        onclick="teste.play()"></td>
+                <td><input type="button" class="button" value="." id="Bponto" onclick="teste.play()"></td>
             </tr>
         </table>
     </div>

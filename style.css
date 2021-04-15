@@ -49,6 +49,27 @@ body{
     color: white;
     border-radius: 8px;
 }
+.operation{
+    transition: 200ms;
+    outline: none;
+    margin: 2px;
+    height: 65px;
+    width: 65px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: #494C4E;
+    border: none; 
+    color: white; margin: 2px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: #494C4E;
+    border: none; 
+    color: white;
+    border-radius: 8px;
+}
 .button:hover {
+    background-color: darkgrey;
+}
+.operation:hover {
     background-color: darkgrey;
 }

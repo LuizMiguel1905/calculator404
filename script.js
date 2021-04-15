@@ -29,8 +29,10 @@ function calcular() {
     }
 }
 */
-
 var button = document.querySelectorAll(".button");
+var operationButton = document.querySelectorAll(".operation");
+var screen = document.form.txt;
+
 button.forEach(function (button) {
     button.addEventListener("click", function (event) {
         display();
@@ -38,11 +40,17 @@ button.forEach(function (button) {
 })
 
 function display() {
-    if (document.form.txt.value == 0) {
-        document.form.txt.value = "";
-        document.form.txt.value = document.form.txt.value + event.target.value
-    } else {
-        document.form.txt.value = document.form.txt.value + event.target.value
+    var number = event.target.value;
+    if (number == 'C') {
+        screen.value = "";
+        screen.value = 0;
+    }
+    else if (0 <= number || number <= 9 || number == '.') {
+        if (screen.value == 0) {
+            screen.value = "";
+            screen.value = screen.value + number;
+        } else {
+            screen.value = screen.value + number;
+        }
     }
 }
-
