@@ -32,6 +32,8 @@ function calcular() {
 var button = document.querySelectorAll(".button");
 var operationButton = document.querySelectorAll(".operation");
 var screen = document.form.txt;
+var resultado;
+var valor;
 
 button.forEach(function (button) {
     button.addEventListener("click", function (event) {
@@ -39,18 +41,53 @@ button.forEach(function (button) {
     })
 })
 
-function display() {
+function display(number) {
     var number = event.target.value;
     if (number == 'C') {
-        screen.value = "";
-        screen.value = 0;
+        valor = screen.value = "";
+          valor = screen.value = 0;
     }
-    else if (0 <= number || number <= 9 || number == '.') {
         if (screen.value == 0) {
-            screen.value = "";
-            screen.value = screen.value + number;
+             valor = screen.value = "";
+          valor = screen.value = screen.value + number;
         } else {
-            screen.value = screen.value + number;
+           valor = screen.value = screen.value + number;
         }
+    }
+    operation.forEach(function (operation) {
+        operation.addEventListener("click", function (event) {
+            deleteC();
+        })
+    })
+function deleteC(){
+    var number = event.target.value;
+    if (number == 'C') {
+        valor = screen.value = "";
+          valor = screen.value = 0;
+    }
+}
+
+//apagar de um por um 
+operation.forEach(function (operation) {
+    operation.addEventListener("click", function (event) {
+        deletee();
+    })
+})
+function deletee(){
+    screen.value; 
+    screen.value = screen.value.substring(0, screen.value.length -1); 
+}
+//operação para fazer as contas 
+operation.forEach(function (operation) {
+    operation.addEventListener("click", function (event) {
+        conta();
+    })
+})
+function conta(){
+    resultado = eval(valor);
+    if(valor){
+        screen.value = resultado; 
+    }else{
+        screen.value = "Erro"; 
     }
 }
