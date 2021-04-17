@@ -41,19 +41,13 @@ button.forEach(function (button) {
     })
 })
 
-//Função de inserir valor
 function display(number) {
-
     var number = event.target.value;
-    if (number == 'C') {
-        valor = screen.value = "";
-    }
-    if (0 <= number || number <= 9) {
-        valor = screen.value = screen.value + number;
 
-    }
+    valor = screen.value;
+    valor = screen.value = screen.value + number;
+
 }
-///-=-=-=-====-=-=-=-=-=-=-==-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=--
 operation.forEach(function (operation) {
     operation.addEventListener("click", function (event) {
         deleteC();
