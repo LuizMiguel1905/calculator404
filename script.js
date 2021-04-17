@@ -41,29 +41,28 @@ button.forEach(function (button) {
     })
 })
 
+//Função de inserir valor
 function display(number) {
+
     var number = event.target.value;
     if (number == 'C') {
         valor = screen.value = "";
-          valor = screen.value = 0;
     }
-        if (screen.value == 0) {
-             valor = screen.value = "";
-          valor = screen.value = screen.value + number;
-        } else {
-           valor = screen.value = screen.value + number;
-        }
+    if (0 <= number || number <= 9) {
+        valor = screen.value = screen.value + number;
+
     }
-    operation.forEach(function (operation) {
-        operation.addEventListener("click", function (event) {
-            deleteC();
-        })
+}
+///-=-=-=-====-=-=-=-=-=-=-==-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=--
+operation.forEach(function (operation) {
+    operation.addEventListener("click", function (event) {
+        deleteC();
     })
-function deleteC(){
+})
+function deleteC() {
     var number = event.target.value;
     if (number == 'C') {
         valor = screen.value = "";
-          valor = screen.value = 0;
     }
 }
 
@@ -73,9 +72,9 @@ operation.forEach(function (operation) {
         deletee();
     })
 })
-function deletee(){
-    screen.value; 
-    screen.value = screen.value.substring(0, screen.value.length -1); 
+function deletee() {
+    screen.value;
+    screen.value = screen.value.substring(0, screen.value.length - 1);
 }
 //operação para fazer as contas 
 operation.forEach(function (operation) {
@@ -83,11 +82,11 @@ operation.forEach(function (operation) {
         conta();
     })
 })
-function conta(){
+function conta() {
     resultado = eval(valor);
-    if(valor){
-        screen.value = resultado; 
-    }else{
-        screen.value = "Erro"; 
+    if (valor) {
+        screen.value = resultado;
+    } else {
+        screen.value = "Erro";
     }
 }
