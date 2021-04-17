@@ -39,32 +39,38 @@ button.forEach(function (button) {
     button.addEventListener("click", function (event) {
         contador++;
         display();
-        console.log(contador);
 
     })
 })
 
 function display(number) {
     var number = event.target.value;
-    valor = screen.value;
-    valor = screen.value = screen.value + number;
-    if (contador == 1 && number == '*') {
+    if (contador >= 12) {
+        alert("Tamanho excedido!")
         valor = screen.value = ""
         contador = 0;
-    }
-    else if (contador == 1 && number == '/') {
-        valor = screen.value = ""
-        contador = 0;
-    }
-    else if (contador == 1 && number == '+') {
-        valor = screen.value = ""
-        contador = 0;
-    }
-    else if (contador == 1 && number == '.') {
-        valor = screen.value = ""
-        contador = 0;
+    } else {
+        valor = screen.value;
+        valor = screen.value = screen.value + number;
+        if (contador == 1 && number == '*') {
+            valor = screen.value = ""
+            contador = 0;
+        }
+        else if (contador == 1 && number == '/') {
+            valor = screen.value = ""
+            contador = 0;
+        }
+        else if (contador == 1 && number == '+') {
+            valor = screen.value = ""
+            contador = 0;
+        }
+        else if (contador == 1 && number == '.') {
+            valor = screen.value = ""
+            contador = 0;
+        }
     }
 }
+
 operation.forEach(function (operation) {
     operation.addEventListener("click", function (event) {
         deleteC();
