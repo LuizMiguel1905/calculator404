@@ -15,10 +15,6 @@ button.forEach(function (button) {
         console.log(signal)
         array = screen.value
         display();
-
-
-
-
     })
 })
 

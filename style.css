@@ -5,8 +5,8 @@
 }
 body{
     display: flex;
-    align-items: center; /* Centraliza na horizontal*/
-    justify-content: center; /* Centraliza na vertical*/
+    align-items: center;
+    justify-content: center; 
     height: 100vh;
     width: 100%;
     background-image:linear-gradient(45deg,gray,black)
