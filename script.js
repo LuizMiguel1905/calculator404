@@ -12,51 +12,30 @@ var signal = false;
 
 button.forEach(function (button) {
     button.addEventListener("click", function (event) {
-        console.log(signal)
-        array = screen.value
+
+        console.log(array[array.length - 1])
         display();
-
-
-
+        array = screen.value
 
     })
 })
 
 function display(number) {
     var number = event.target.value;
-    if (signal == false) {
-        if (number == "+" || number == "*" || number == "/") {
+
+    if (array[array.length - 1] == '+' || array[array.length - 1] == '*' || array[array.length - 1] == '/' || array[array.length - 1] == '-' || array[array.length - 1] == '.' || screen.value == "") {
+        if (number == "+" || number == "*" || number == "/" || number == "-" || number == ".") {
             number = "";
         }
     }
-    if (number == '+' || number == '-' || number == '*' || number == '/') {
-        block = true;
-    } else {
 
-        block = false;
-    }
-
-    if (array[array.length - 1] == '+' && block == true) {
-        number = "";
-    }
-    if (array[array.length - 1] == '-' && block == true) {
-        number = "";
-    }
-    if (array[array.length - 1] == '*' && block == true) {
-        number = "";
-    }
-    if (array[array.length - 1] == '/' && block == true) {
-        number = "";
-    }
     if (screen.value.length >= 12) {
         alert("Tamanho excedido!")
         valor = screen.value = ""
     } else {
         valor = screen.value;
         valor = screen.value = screen.value + number;
-        if (valor >= 9 || valor < 0) {
-            signal = true;
-        }
+
     }
 }
 
@@ -92,7 +71,7 @@ operation.forEach(function (operation) {
 function conta() {
     resultado = eval(valor);
     if (valor) {
-        screen.value = resultado;
+        screen.value = resultado.toFixed(1);
     } else {
         screen.value = "Erro";
     }
