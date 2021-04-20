@@ -73,6 +73,6 @@ function conta() {
     if (valor) {
         screen.value = resultado.toFixed(1);
     } else {
-        screen.value = "Erro";
+        screen.value = "";
     }
 }
