@@ -30,7 +30,7 @@ function display(number) {
     }
 
     if (screen.value.length >= 12) {
-        alert("Tamanho excedido!")
+        alert("exceeded size!")
         valor = screen.value = ""
     } else {
         valor = screen.value;
