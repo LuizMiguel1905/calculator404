@@ -8,19 +8,31 @@ var resultado;
 var valor;
 var block = false;
 var array = [];
+var signal = false;
 
 button.forEach(function (button) {
     button.addEventListener("click", function (event) {
+        console.log(signal)
         array = screen.value
         display();
+
+
+
+
     })
 })
 
 function display(number) {
     var number = event.target.value;
+    if (signal == false) {
+        if (number == "+" || number == "*" || number == "/") {
+            number = "";
+        }
+    }
     if (number == '+' || number == '-' || number == '*' || number == '/') {
         block = true;
     } else {
+
         block = false;
     }
 
@@ -42,6 +54,9 @@ function display(number) {
     } else {
         valor = screen.value;
         valor = screen.value = screen.value + number;
+        if (valor >= 9 || valor < 0) {
+            signal = true;
+        }
     }
 }
 
@@ -54,7 +69,7 @@ function deleteC() {
     var number = event.target.value;
     if (number == 'C') {
         valor = screen.value = "";
-        contador = 0;
+        signal = false
     }
 }
 
