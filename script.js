@@ -34,40 +34,44 @@ var operationButton = document.querySelectorAll(".operation");
 var screen = document.form.txt;
 var resultado;
 var valor;
-var contador = 0;
+var block = false;
+var array = [];
 button.forEach(function (button) {
     button.addEventListener("click", function (event) {
-        contador++;
         display();
+        array = screen.value
+        console.log(array[array.length - 1])
+        console.log(screen.value.length)
 
     })
 })
 
 function display(number) {
     var number = event.target.value;
-    if (contador >= 12) {
+    if (number == '+' || number == '-' || number == '*' || number == '/') {
+        block = true;
+    } else {
+        block = false;
+    }
+
+    if (array[array.length - 1] == '+' && block == true) {
+        number = "";
+    }
+    if (array[array.length - 1] == '-' && block == true) {
+        number = "";
+    }
+    if (array[array.length - 1] == '*' && block == true) {
+        number = "";
+    }
+    if (array[array.length - 1] == '/' && block == true) {
+        number = "";
+    }
+    if (screen.value.length >= 12) {
         alert("Tamanho excedido!")
         valor = screen.value = ""
-        contador = 0;
     } else {
         valor = screen.value;
         valor = screen.value = screen.value + number;
-        if (contador == 1 && number == '*') {
-            valor = screen.value = ""
-            contador = 0;
-        }
-        else if (contador == 1 && number == '/') {
-            valor = screen.value = ""
-            contador = 0;
-        }
-        else if (contador == 1 && number == '+') {
-            valor = screen.value = ""
-            contador = 0;
-        }
-        else if (contador == 1 && number == '.') {
-            valor = screen.value = ""
-            contador = 0;
-        }
     }
 }
 
