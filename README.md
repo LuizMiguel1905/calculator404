@@ -1,3 +1,3 @@
 # calculator404
-##Sobre o projeto:
-##Ferramentas utilizadas
+## Sobre o projeto:
+## Ferramentas utilizadas
